@@ -1,0 +1,86 @@
+
+body {
+    background-size: cover;
+
+
+}
+
+.container {
+    margin: 0px auto;
+    width: 50%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    float: left;
+}
+input[type=text]  {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=password]  {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+input[type=reset] {
+    background-color: cyan;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 20px;
+
+}
+.nav { 
+    height:30px;
+    overflow: hidden;
+
+}
+.nav a {
+    color: hotpink;
+    font-weight:bold;
+    font-size:18px;
+    text-decoration:none;
+    width:18%;
+    height:30px;
+    text-align:center;
+    float:left;
+    line-height:30px;
+    margin-right: 5px;
+
+}
+.nav i{
+    margin: 0 5px;
+}
+.nav a:hover, .sub:hover {
+    color:#F36;
+    background-color:#FFC;
+}
+
+
