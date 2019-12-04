@@ -1,5 +1,4 @@
 
-/*BODY==============================================*/
 body {
     max-width:75%;
     height:auto;
@@ -35,7 +34,7 @@ body {
 .nav i{
     margin: 0 5px;
 }
-.nav a:hover, .sub:hover {
+.nav a:hover,.dropdown .sub:hover {
     color:#F36;
     background-color:#FFC;
 }
@@ -59,13 +58,14 @@ img{
 }
 
 .btn input[type=submit] {
-    background-color: #6beef2;
-    color: white;
-    padding: 2px 2px 2px 2px;
+    background-color: #e16bf257;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: left;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 8px;
+    margin-top: -10px;
 }
 
 .btn input[type=submit]:hover {
@@ -73,25 +73,25 @@ img{
 }
 
 .login{
-    padding: 2px 5px 2px 5px;
-    background-color: #ed73be;
-    border-radius: 5px;
-    text-decoration: none;
+    border: none;
     color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    background: #e147a5;
+    padding: 10px 24px;
+    border-radius: 12px;
+    margin-top: -10px;
 }
 .login a{
     color: white;
     text-decoration: none;
 }
 
-.login a:hover{
-    color: hotpink;
-    background-color: #FFC;
 
-    border-radius: 4.5px 5px;
-    margin-left: -4.8px;
 
-}
 .nav .dropdown{
     float:left;
     margin:0;
@@ -134,3 +134,108 @@ img{
 .dropdown:hover .subMenu{
     display:block;
 }
+
+.price{
+    display: flex;
+    float: right;
+}
+
+
+.btn2 input[type=submit] {
+    background-color: #ff000085;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 8px;
+    margin: 25px;
+}
+
+.btn2 input[type=submit]:hover {
+    background-color: red;
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+.button {
+    background-color: #58257b;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 25px -10px 25px 25px;
+}
+
+.btn3 input[type=submit] {
+    background-color: yellow;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+
+.btn3 input[type=submit]:hover {
+    background-color: #ff000082;
+}
+
+.btn3 input[type=reset] {
+    background-color: aquamarine;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-left: 30px;
+}
+
+.btn3 input[type=reset]:hover {
+    background-color: #ff000082;
+}
+
+.buttonn {
+    margin: 10px;
+    margin-bottom: -40px;
+    float: right;
+}
+
+.cancelbtn{
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    background: #e147a5;
+    padding: 10px 24px;
+    border-radius: 12px;
+    margin-top: -120px;
+    margin-left: 60px;
+}
+
+.container2{
+    border-radius: 30px;
+    background-color: #f2f2f2;
+    padding: 40px 40px 60px 40px;
+    margin: 20px 40px 40px 40px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+input[type=text]{    
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;}

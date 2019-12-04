@@ -36,6 +36,10 @@
         <servlet-name>CreatDiscountController</servlet-name>
         <servlet-class>servlet.CreatDiscountController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UseDiscountController</servlet-name>
+        <servlet-class>servlet.UseDiscountController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SearchController</servlet-name>
         <url-pattern>/SearchController</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>CreatDiscountController</servlet-name>
         <url-pattern>/CreatDiscountController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UseDiscountController</servlet-name>
+        <url-pattern>/UseDiscountController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

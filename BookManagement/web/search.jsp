@@ -66,7 +66,7 @@
                 </c:if>
                 <c:if test="${sessionScope.ROLEID ne '1'}">
                     <a href="viewCart.jsp"><i class='fas fa-shopping-cart'></i>  Your Cart</a>
-                    <a href="login.html"><i class="fas fa-history"></i>  History</a>
+                    <a href="history.jsp"><i class="fas fa-history"></i>  History</a>
                 </c:if>
 
             </c:if>
@@ -159,7 +159,7 @@
                                                 <c:param name="txtPrice" value="${dto.price}"></c:param>
                                                 <c:param name="txtId" value="${dto.bookId}"></c:param>
                                             </c:url>
-                                            <Button><a href="${addToCartLink}">ADD</a></Button>
+                                           <a href="${addToCartLink}">ADD</a>
 
                                         </td>                               
                                     </c:if>

@@ -1,5 +1,4 @@
 
-/*BODY==============================================*/
 body {
     max-width:75%;
     height:auto;
@@ -135,3 +134,40 @@ img{
 .dropdown:hover .subMenu{
     display:block;
 }
+
+.price{
+    display: flex;
+    float: right;
+}
+
+
+.btn2 input[type=submit] {
+    background-color: #ff000085;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 8px;
+    margin: 25px;
+}
+
+.btn2 input[type=submit]:hover {
+    background-color: red;
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+.button {
+    background-color: #58257b;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 25px -10px 25px 25px;
+}
+

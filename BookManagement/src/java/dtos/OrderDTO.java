@@ -13,6 +13,7 @@ import java.sql.Timestamp;
  * @author USER
  */
 public class OrderDTO implements Serializable{
+      private int orderId;
     private String userId;
     private float totalPrice;
     private Timestamp date;
@@ -26,6 +27,22 @@ public class OrderDTO implements Serializable{
         this.date = date;
     }
 
+        public OrderDTO(int orderId, String userId, float totalPrice, Timestamp date) {
+        this.orderId = orderId;
+        this.userId = userId;
+        this.totalPrice = totalPrice;
+        this.date = date;
+    }
+
+    public int getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
+    }
+    
+    
     public String getUserId() {
         return userId;
     }

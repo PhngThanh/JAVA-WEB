@@ -81,6 +81,7 @@ public class ConfirmController extends HttpServlet {
                     for (Map.Entry<String, CartDTO> dto : cart.getCart().entrySet()) {
                         orderDetailDAO.insertOrderDetail(orderId, dto.getValue());
                     }
+                    session.setAttribute("ORDERLIST", orderDAO.getAllOrder(userId));
                     session.removeAttribute("CART");
                     url = SUCCESS;
                 } else{

@@ -141,3 +141,25 @@ input[type=reset] {
 .dropdown:hover .subMenu{
     display:block;
 }
+.btnLogout .btn{
+    background-color: black;
+}
+
+.welcome2{
+    color: white;
+    display: flex;
+    float: right;
+    margin-top: -50px;
+}
+
+.container2 {
+    border-radius: 30px;
+    background-color: #ffffff;
+    padding: 40px 40px 60px 40px;
+    position: absolute;
+    margin: 20px 40px 40px 400px;
+    font-family: 'Roboto Mono', monospace;}
+
+a, a:hover{
+    text-decoration: none;
+}

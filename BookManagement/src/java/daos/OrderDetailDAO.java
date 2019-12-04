@@ -6,11 +6,14 @@
 package daos;
 
 import dtos.CartDTO;
+import dtos.OrderDetailDTO;
 import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.naming.NamingException;
 import utils.DBUtilities;
 
@@ -56,5 +59,30 @@ public class OrderDetailDAO implements Serializable {
         } finally {
             closeConnection();
         }
+    }
+    
+     public List<OrderDetailDTO> getOrderDetailByOrderId(int orderId) throws NamingException, SQLException
+    {   
+        List<OrderDetailDTO> orderDetailList = new ArrayList();
+        try{
+            con = DBUtilities.makeConnection();
+            if(con != null)
+            {
+                String sql = "SELECT OrderId, BookId, Title, Quantity, Price FROM tbl_OrderDetail WHERE OrderId = ?";
+                ps = con.prepareStatement(sql);
+                ps.setInt(1, orderId);
+                rs = ps.executeQuery();
+                while(rs.next())
+                {
+                    String bookId = rs.getString("BookId");
+                    String title = rs.getString("Title");
+                    int quantity = rs.getInt("Quantity");
+                    float price = rs.getFloat("Price");
+                    orderDetailList.add(new OrderDetailDTO(bookId, title, price, quantity, orderId));
+                }
+            }
+        }finally{
+            closeConnection();
+        }return orderDetailList;
     }
 }

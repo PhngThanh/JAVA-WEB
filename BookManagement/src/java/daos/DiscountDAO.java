@@ -93,4 +93,24 @@ public class DiscountDAO implements Serializable {
             closeConnection();
         }return check;
     }
+    public boolean check(String userId, String discountCode) throws NamingException, SQLException {
+        boolean check = false;
+        try {
+            con = DBUtilities.makeConnection();
+            if (con != null) {
+                String sql = "SELECT userId, discountCode FROM tbl_Discount WHERE userId = ? AND discountCode = ?";
+                ps = con.prepareStatement(sql);
+                ps.setString(1, userId.trim());
+                ps.setString(2, discountCode.trim());
+                rs = ps.executeQuery();
+                if (rs.next()) {
+                    this.userId = userId;   
+                    this.discountCode = discountCode;    
+                    check = true;
+                }
+            }
+        } finally {
+            closeConnection();
+        }return check;
+    }
 }

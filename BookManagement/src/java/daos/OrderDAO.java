@@ -12,6 +12,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 import javax.naming.NamingException;
 import utils.DBUtilities;
 
@@ -69,5 +71,31 @@ public class OrderDAO implements Serializable {
             closeConnection();
         }
        return orderId;
+    }
+    
+    public List<OrderDTO> getAllOrder(String user) throws NamingException, SQLException
+    {   
+        List<OrderDTO> orderList = new ArrayList();
+        try{
+            con = DBUtilities.makeConnection();
+            if(con != null)
+            {
+                String sql = "SELECT id, userId, totalPrice, shoppingDate from tbl_Order where userId=? order by shoppingDate desc";
+                ps = con.prepareStatement(sql);
+                ps.setString(1, user);
+                
+                rs = ps.executeQuery();
+                while(rs.next())
+                {
+                    int id = rs.getInt("id");
+                    String userId = rs.getString("userId");
+                    float totalPrice = rs.getFloat("totalPrice");
+                    Timestamp shoppingDate = rs.getTimestamp("shoppingDate");
+                    orderList.add(new OrderDTO(id, userId, totalPrice, shoppingDate));
+                }
+            }
+        }finally{
+            closeConnection();
+        }return orderList;
     }
 }

@@ -5,6 +5,7 @@
  */
 package servlet;
 
+import daos.OrderDAO;
 import daos.RoleDAO;
 import daos.UserDAO;
 import java.io.IOException;
@@ -43,6 +44,7 @@ public class LoginController extends HttpServlet {
           String password = request.getParameter("txtPassword");
           UserDAO userDAO = new UserDAO();
           RoleDAO roleDAO = new RoleDAO();
+          OrderDAO orderDAO = new OrderDAO();
           boolean check = userDAO.checkLogin(userId, password);
           if(check)
           {
@@ -51,6 +53,7 @@ public class LoginController extends HttpServlet {
               session.setAttribute("USERID", userId);
               session.setAttribute("ROLEID", userDAO.getRoleId());  
               session.setAttribute("ROLELIST", roleDAO.getRoleList());
+              session.setAttribute("ORDERLIST", orderDAO.getAllOrder(userId));
               url = SUCCESS;
           }
           else{
